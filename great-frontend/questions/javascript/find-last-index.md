@@ -90,6 +90,64 @@ const startIndex =
       ? Math.max(array.length + fromIndex, 0)
       : Math.min(fromIndex, array.length - 1);
 ```
+The goal is to determine a valid starting index for our reverse search, accounting for different `fromIndex` values:
+
+1. For an array `[a, b, c, d, e]` (length = 5), these are valid indices:
+   ```
+   Index:  0  1  2  3  4
+   Array: [a, b, c, d, e]
+   ```
+
+2. JavaScript allows negative indexing where `-1` means last element, `-2` means second-to-last, etc:
+   ```
+   Index:    -5 -4 -3 -2 -1
+   Array:    [a, b, c, d, e]
+   Position:  0  1  2  3  4
+   ```
+
+3. Let's analyze both cases:
+
+   **Case A: Negative fromIndex** (`fromIndex < 0`):
+   ```javascript
+   Math.max(array.length + fromIndex, 0)
+   ```
+   - If `fromIndex = -2` for our array:
+     ```
+     array.length + fromIndex = 5 + (-2) = 3
+     Math.max(3, 0) = 3
+     ```
+   - If `fromIndex = -6` (too negative!):
+     ```
+     array.length + fromIndex = 5 + (-6) = -1
+     Math.max(-1, 0) = 0  // Prevents going below first element
+     ```
+
+   **Case B: Non-negative fromIndex**:
+   ```javascript
+   Math.min(fromIndex, array.length - 1)
+   ```
+   - If `fromIndex = 2`:
+     ```
+     array.length - 1 = 5 - 1 = 4
+     Math.min(2, 4) = 2
+     ```
+   - If `fromIndex = 10` (too large!):
+     ```
+     array.length - 1 = 5 - 1 = 4
+     Math.min(10, 4) = 4  // Prevents going beyond last element
+     ```
+
+The ternary combines these cases:
+```javascript
+startIndex = fromIndex < 0 
+  ? Math.max(array.length + fromIndex, 0)  // Handle negative index
+  : Math.min(fromIndex, array.length - 1)   // Handle positive index
+```
+
+This ensures that:
+1. Negative indices work as expected (-1 → last element, etc.)
+2. Too-negative indices clamp to 0 (first element)
+3. Too-large indices clamp to array.length-1 (last element)
 
 ## Resources
 [Lodash `_.findLastIndex`](https://lodash.com/docs/#findLastIndex)

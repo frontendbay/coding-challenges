@@ -76,6 +76,8 @@ function isIsomorphic(s, t) {
     const tChar = t.charCodeAt(i);
 
     // If current mapping doesn't match previous mapping in either direction
+    // In other words, has this character been mapped before (sToT[sChar] !== -1)
+    // If yes, does it map to a different character than current? (sToT[sChar] !== tChar)
     if (sToT[sChar] !== -1 && sToT[sChar] !== tChar) {
       return false;
     }

@@ -131,57 +131,53 @@ interface AccordionProps {
 }
 
 const HtmlContent = () => (
-  `
-    <div className="space-y-4">
-      <p>
-        HTML (HyperText Markup Language) forms the foundation of web content. It's a semantic language that defines the structure and meaning of web content through elements like:
-      </p>
-      <div className="pl-4 border-l-4 border-blue-200">
-        <p><strong>Document Structure:</strong> html, head, body</p>
-        <p><strong>Content Sections:</strong> header, nav, main, article, section, aside, footer</p>
-        <p><strong>Text Content:</strong> h1-h6, p, ul/ol, blockquote</p>
-      </div>
-      <p className="text-sm bg-gray-50 p-3 rounded">
-        Pro Tip: Focus on semantic HTML to improve accessibility and SEO. For example, use button for interactive elements and article for self-contained content.
-      </p>
+  <div className="space-y-4">
+    <p>
+      HTML (HyperText Markup Language) forms the foundation of web content. It's a semantic language that defines the structure and meaning of web content through elements like:
+    </p>
+    <div className="pl-4 border-l-4 border-blue-200">
+      <p><strong>Document Structure:</strong> html, head, body</p>
+      <p><strong>Content Sections:</strong> header, nav, main, article, section, aside, footer</p>
+      <p><strong>Text Content:</strong> h1-h6, p, ul/ol, blockquote</p>
     </div>
-  `
+    <p className="text-sm bg-gray-50 p-3 rounded">
+      Pro Tip: Focus on semantic HTML to improve accessibility and SEO. For example, use button for interactive elements and article for self-contained content.
+    </p>
+  </div>
 );
 
 const CssContent = () => (
-  `
-    <div className="space-y-4">
-      <p>
-        CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. Modern CSS encompasses several key concepts:
-      </p>
-      <div className="pl-4 border-l-4 border-green-200">
-        <p><strong>Box Model:</strong> margin, border, padding, content</p>
-        <p><strong>Layout Systems:</strong> Flexbox for 1D layouts, Grid for 2D layouts</p>
-        <p><strong>Responsive Design:</strong> Media queries, relative units (rem, em, vh, vw)</p>
-        <p><strong>Modern Features:</strong> Custom properties, logical properties, container queries</p>
-      </div>
-      <p className="text-sm bg-gray-50 p-3 rounded">
-        Pro Tip: Use CSS custom properties (variables) for consistent theming and easier maintenance. Example: --primary-color: #3b82f6;
-      </p>
+  <div className="space-y-4">
+    <p>
+      CSS (Cascading Style Sheets) controls the visual presentation of HTML elements. Modern CSS encompasses several key concepts:
+    </p>
+    <div className="pl-4 border-l-4 border-green-200">
+      <p><strong>Box Model:</strong> margin, border, padding, content</p>
+      <p><strong>Layout Systems:</strong> Flexbox for 1D layouts, Grid for 2D layouts</p>
+      <p><strong>Responsive Design:</strong> Media queries, relative units (rem, em, vh, vw)</p>
+      <p><strong>Modern Features:</strong> Custom properties, logical properties, container queries</p>
     </div>
-  `
+    <p className="text-sm bg-gray-50 p-3 rounded">
+      Pro Tip: Use CSS custom properties (variables) for consistent theming and easier maintenance. Example: --primary-color: #3b82f6;
+    </p>
+  </div>
 );
 
 const JavaScriptContent = () => (
-  `
-    <div className="space-y-4">
-      <p>
-        JavaScript brings interactivity and dynamic behavior to web applications. Key modern JavaScript concepts include:
-      </p>
-      <div className="pl-4 border-l-4 border-yellow-200">
-        <p><strong>Modern Syntax:</strong> Arrow functions, destructuring, spread/rest operators</p>
-        <p><strong>Asynchronous Programming:</strong> Promises, async/await, fetch API</p>
-        <p><strong>Core Concepts:</strong> Closures, prototypes, modules</p>
-        <p><strong>DOM Manipulation:</strong> Event handling, element creation/modification</p>
-      </div>
-      <div className="bg-gray-50 p-3 rounded space-y-2">
-        <p className="text-sm font-medium">Example of modern JavaScript:</p>
-        <code className="text-sm block bg-gray-100 p-2 rounded">
+  <div className="space-y-4">
+    <p>
+      JavaScript brings interactivity and dynamic behavior to web applications. Key modern JavaScript concepts include:
+    </p>
+    <div className="pl-4 border-l-4 border-yellow-200">
+      <p><strong>Modern Syntax:</strong> Arrow functions, destructuring, spread/rest operators</p>
+      <p><strong>Asynchronous Programming:</strong> Promises, async/await, fetch API</p>
+      <p><strong>Core Concepts:</strong> Closures, prototypes, modules</p>
+      <p><strong>DOM Manipulation:</strong> Event handling, element creation/modification</p>
+    </div>
+    <div className="bg-gray-50 p-3 rounded space-y-2">
+      <p className="text-sm font-medium">Example of modern JavaScript:</p>
+      <code className="text-sm block bg-gray-100 p-2 rounded">
+        {`
           const getData = async () => {
           try {
               const response = await fetch('/api/data');
@@ -191,37 +187,37 @@ const JavaScriptContent = () => (
               console.error(error);
             }
           };
-        </code>
-      </div>
+        `}
+      </code>
     </div>
-  `
+  </div>
 );
 
 const ReactContent = () => (
-  `
-    <div className="space-y-4">
-      <p>
-        React is a JavaScript library for building user interfaces through components. Essential React concepts include:
-      </p>
-      <div className="pl-4 border-l-4 border-purple-200">
-        <p><strong>Components:</strong> Function components, props, children</p>
-        <p><strong>Hooks:</strong> useState, useEffect, useContext, custom hooks</p>
-        <p><strong>State Management:</strong> Component state, context, external stores</p>
-        <p><strong>Performance:</strong> Memoization, lazy loading, code splitting</p>
-      </div>
-      <div className="bg-gray-50 p-3 rounded space-y-2">
-        <p className="text-sm font-medium">Modern React Hook Example:</p>
-        <code className="text-sm block bg-gray-100 p-2 rounded">
+  <div className="space-y-4">
+    <p>
+      React is a JavaScript library for building user interfaces through components. Essential React concepts include:
+    </p>
+    <div className="pl-4 border-l-4 border-purple-200">
+      <p><strong>Components:</strong> Function components, props, children</p>
+      <p><strong>Hooks:</strong> useState, useEffect, useContext, custom hooks</p>
+      <p><strong>State Management:</strong> Component state, context, external stores</p>
+      <p><strong>Performance:</strong> Memoization, lazy loading, code splitting</p>
+    </div>
+    <div className="bg-gray-50 p-3 rounded space-y-2">
+      <p className="text-sm font-medium">Modern React Hook Example:</p>
+      <code className="text-sm block bg-gray-100 p-2 rounded">
+        {`
           const useCounter = (initialValue = 0) => {
             const [count, setCount] = useState(initialValue);
             const increment = () => setCount(prev => prev + 1);
             const decrement = () => setCount(prev => prev - 1);
             return { count, increment, decrement };
           };
-        </code>
-      </div>
+        `}
+      </code>
     </div>
-  `
+  </div>
 );
 
 // Define comprehensive content about web development fundamentals

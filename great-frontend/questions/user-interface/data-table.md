@@ -210,7 +210,9 @@ type PaginationActions = {
   goToNextPage: () => void;
   goToPreviousPage: () => void;
 };
+```
 
+```jsx
 // hooks/usePagination.ts
 import { useState, useMemo, useCallback } from 'react';
 
@@ -266,7 +268,9 @@ export function usePagination<T>(
     goToPreviousPage
   };
 }
+```
 
+```jsx
 // components/TableHeader.tsx
 import { memo } from 'react';
 
@@ -296,7 +300,9 @@ export const TableHeader = memo(() => (
 ));
 
 TableHeader.displayName = 'TableHeader';
+```
 
+```jsx
 // components/Pagination.tsx
 import { memo } from 'react';
 
@@ -372,7 +378,9 @@ export const Pagination = memo(({
 ));
 
 Pagination.displayName = 'Pagination';
+```
 
+```jsx
 // components/DataTable.tsx
 import { memo } from 'react';
 import { usePagination } from '../hooks/usePagination';
@@ -442,10 +450,12 @@ export const DataTable = memo(({
 });
 
 DataTable.displayName = 'DataTable';
+```
 
+```jsx
 // App.tsx
-import { DataTable } from './components/DataTable';
-import users from './data/users.json';
+import { DataTable } from "./components/DataTable";
+import users from "./data/users.json";
 
 export default function App() {
   return (
@@ -455,7 +465,7 @@ export default function App() {
         title="User Directory"
         paginationConfig={{
           defaultPageSize: 10,
-          pageSizeOptions: [5, 10, 20, 50]
+          pageSizeOptions: [5, 10, 20, 50],
         }}
       />
     </div>

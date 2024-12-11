@@ -1,4 +1,4 @@
-# Find Last Index
+# Binary Search
 
 > Source: [https://www.greatfrontend.com/questions/javascript/binary-search?list=data-structures-algorithms](https://www.greatfrontend.com/questions/javascript/binary-search?list=data-structures-algorithms)
 

@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fd-codeblock [data-radix-scroll-area-viewport] {
+  max-height: none;
+}
